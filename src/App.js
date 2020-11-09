@@ -51,7 +51,11 @@ function App() {
             />
           </div>
           <div className="aside-container">
-            <Cart listMeals={listMeals} />
+            <Cart
+              listMeals={listMeals}
+              listMeals={listMeals}
+              setListMeals={setListMeals}
+            />
           </div>
         </div>
       </main>

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import CartItem from "./CartItem";
 
-const Cart = ({ listMeals }) => {
+const Cart = ({ listMeals, setListMeals }) => {
   return (
     <section>
       <button>Valider mon panier</button>
 
       <div className="cart-container">
         <div className="cart-list">
-          <CartItem listMeals={listMeals} />
+          <CartItem listMeals={listMeals} setListMeals={setListMeals} />
         </div>
 
         <div className="amounts">

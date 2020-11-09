@@ -6,7 +6,10 @@ const Meal = ({ category, listMeals, setListMeals }) => {
   const handleAddMeal = (meal) => {
     // Créer une copie, Modifier, Remplacer
     const newMeals = [...listMeals];
-    newMeals.push(meal);
+    newMeals.push({
+      meal: meal,
+      quantity: 1,
+    });
     setListMeals(newMeals);
   };
 
