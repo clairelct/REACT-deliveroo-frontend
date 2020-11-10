@@ -14,7 +14,8 @@ body {
   font-weight: 400;
 }
 .container {
-  width: 65%;
+  width: 80%;
+  max-width: 1170px;
   margin: 0 auto;
 }
 h1 {
@@ -75,14 +76,16 @@ header .header-content p {
 }
 .header-content .container div:nth-child(2) {
   width: 30%;
+  min-width: 280px;
   background-color: lightblue;
   height: 230px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .header-content .container div:nth-child(2) img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
 }
 
 /* CONTENT */
@@ -103,6 +106,7 @@ main section {
 }
 .aside-container {
   width: 30%;
+  min-width: 280px;
 }
 
 /* CATEGORY */
@@ -261,4 +265,48 @@ main section {
 .cart-container .total p {
   font-size: 18px;
   font-weight: bold;
+}
+/***************************/
+/*      MEDIA QUERIES      */
+/***************************/
+
+@media screen and (max-width: 1366px) {
+  /* Affichage des menus */
+  h3 {
+    font-size: 16px;
+  }
+  .meal-price p:first-child {
+    font-size: 15px;
+    margin-right: 8px;
+  }
+  .meal-price p:nth-child(2) {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header .header-content p {
+    font-size: 17px;
+  }
+  /* Affichage des menus */
+  .meals-container {
+    flex-direction: column;
+  }
+  .meal-container {
+    width: 100%;
+  }
+  .meal-container:nth-child(odd) {
+    margin-right: 0;
+  }
+  .meal-img {
+    width: calc(100% / 2.5);
+  }
+}
+@media screen and (max-width: 768px) {
+  main .container {
+    flex-direction: column;
+  }
+  .list-container {
+    width: 100%;
+    margin-right: 0;
+  }
 }

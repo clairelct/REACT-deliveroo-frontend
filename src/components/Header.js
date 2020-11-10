@@ -15,10 +15,7 @@ const Header = ({ logo, headerImg, data }) => {
             <p>{data.restaurant.description}</p>
           </div>
           <div>
-            <img
-              src={headerImg}
-              alt="Image de présentation de la boutique Le Pain Quotidien"
-            />
+            <img src={headerImg} alt="Le Pain Quotidien" />
           </div>
         </div>
       </div>

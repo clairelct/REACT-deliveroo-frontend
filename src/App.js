@@ -47,11 +47,7 @@ function App() {
             />
           </div>
           <div className="aside-container">
-            <Cart
-              listMeals={listMeals}
-              listMeals={listMeals}
-              setListMeals={setListMeals}
-            />
+            <Cart listMeals={listMeals} setListMeals={setListMeals} />
           </div>
         </div>
       </main>

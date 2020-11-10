@@ -5,7 +5,7 @@ const Cart = ({ listMeals, setListMeals }) => {
   // Créer le subtotal
   let subtotal = 0;
   listMeals.map((item) => {
-    subtotal += item.price * item.quantity;
+    return (subtotal += item.price * item.quantity);
   });
 
   return (
