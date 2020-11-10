@@ -6,10 +6,14 @@ const CartItem = ({ listMeals, setListMeals }) => {
   const handleReduceQty = (index) => {
     // Copier, modifier, remplacer
     const newListMeals = [...listMeals];
-    if (newListMeals[index].quantity > 0) {
+    if (newListMeals[index].quantity > 1) {
       newListMeals[index].quantity--;
+      setListMeals(newListMeals);
+    } else {
+      const mealToDelete = newListMeals.indexOf(newListMeals[index]);
+      newListMeals.splice(mealToDelete, 1);
+      setListMeals(newListMeals);
     }
-    setListMeals(newListMeals);
   };
   // Fonction pour ajouter la qté. d'un item dans le panier
   const handleAddQty = (index) => {

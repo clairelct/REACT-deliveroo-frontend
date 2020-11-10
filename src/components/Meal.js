@@ -6,6 +6,8 @@ const Meal = ({ category, listMeals, setListMeals }) => {
   const handleAddMeal = (meal, index) => {
     //Ajouter a meal une clé quantité
     meal.quantity = 0;
+    // Modifier le counter
+
     // Créer une copie, Modifier, Remplacer
     const newMeals = [...listMeals];
     //Test si présent
