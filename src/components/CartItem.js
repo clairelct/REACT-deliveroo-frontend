@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CartItem = ({ listMeals, setListMeals }) => {
@@ -11,7 +11,6 @@ const CartItem = ({ listMeals, setListMeals }) => {
     }
     setListMeals(newListMeals);
   };
-
   // Fonction pour ajouter la qté. d'un item dans le panier
   const handleAddQty = (index) => {
     // Copier, modifier, remplacer
@@ -40,9 +39,9 @@ const CartItem = ({ listMeals, setListMeals }) => {
               }}
             />
           </div>
-          <p>{item.meal.title}</p>
+          <p>{item.title}</p>
         </div>
-        <div className="col-2 width-25-per">{item.meal.price}€</div>
+        <div className="col-2 width-25-per">{item.price}€</div>
       </div>
     );
   });

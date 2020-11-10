@@ -3,14 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Meal = ({ category, listMeals, setListMeals }) => {
   // Fonction pour ajouter un menu au panier
-  const handleAddMeal = (meal) => {
+  const handleAddMeal = (meal, index) => {
+    //Ajouter a meal une clé quantité
+    meal.quantity = 0;
     // Créer une copie, Modifier, Remplacer
     const newMeals = [...listMeals];
-    newMeals.push({
-      meal: meal,
-      quantity: 1,
-    });
-    setListMeals(newMeals);
+    //Test si présent
+    if (newMeals.indexOf(meal) === -1) {
+      meal.quantity++;
+      newMeals.push(meal);
+      setListMeals(newMeals);
+    }
   };
 
   return (
@@ -20,7 +23,7 @@ const Meal = ({ category, listMeals, setListMeals }) => {
         <div
           key={index}
           className="meal-container"
-          onClick={() => handleAddMeal(meal)}
+          onClick={() => handleAddMeal(meal, index)}
         >
           <div className="meal-infos">
             <h3>{meal.title}</h3>
