@@ -179,21 +179,10 @@ main section {
   background-color: #ffffff;
   padding: 10px;
   box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
 }
-
-/* .aside-container section > button {
-  background-color: var(--turquoise);
-  width: 100%;
-  border-radius: 5px;
-  border: none;
-  padding: 15px 0;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 10px;
-  outline: none;
-  cursor: pointer;
-} */
 .cart-btn {
   width: 100%;
   border-radius: 5px;
@@ -302,11 +291,40 @@ main section {
   }
 }
 @media screen and (max-width: 768px) {
+  .container {
+    width: 85%;
+  }
+  .header-content .container {
+    flex-direction: column-reverse;
+  }
+  .header-content .container div:first-child,
+  .header-content .container div:nth-child(2) {
+    width: 100%;
+  }
+  .header-content .container div:first-child {
+    margin: 30px 0 30px;
+  }
   main .container {
     flex-direction: column;
   }
   .list-container {
     width: 100%;
     margin-right: 0;
+  }
+  /* Affichage des menus */
+  .meals-container {
+    flex-direction: row;
+  }
+  .meal-container {
+    width: calc(100% / 2 - 10px);
+    flex-direction: column-reverse;
+    height: 300px;
+  }
+  .meal-container:nth-child(odd) {
+    margin-right: 20px;
+  }
+  .meal-img {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }
