@@ -36,6 +36,17 @@ h3 {
 }
 .turquoise {
   color: var(--turquoise);
+  font-size: 8px;
+}
+.addremove-btn {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--turquoise);
+  border-radius: 15px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 /* HEADER */
@@ -196,6 +207,7 @@ main section {
 .cart-empty-btn {
   background-color: #bac3c3;
   color: #8b9a9b;
+  cursor: not-allowed;
 }
 .width-25-per {
   width: 25%;

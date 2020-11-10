@@ -5,14 +5,10 @@ import Header from "./components/Header";
 import Category from "./components/Category";
 import Cart from "./components/Cart";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faStar,
-  faMinusSquare,
-  faPlusSquare,
-} from "@fortawesome/free-solid-svg-icons";
+import { faStar, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import logo from "./assets/Deliveroo_logo.png";
 import headerImg from "./assets/header-image.jpg";
-library.add(faStar, faMinusSquare, faPlusSquare);
+library.add(faStar, faMinus, faPlus);
 
 function App() {
   // states data

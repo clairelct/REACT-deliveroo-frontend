@@ -27,21 +27,25 @@ const CartItem = ({ listMeals, setListMeals }) => {
       <div key={index} className="cart-content">
         <div className="col-1">
           <div>
-            <FontAwesomeIcon
-              className="turquoise"
-              icon="minus-square"
-              onClick={() => {
-                handleReduceQty(index);
-              }}
-            />
+            <div className="addremove-btn">
+              <FontAwesomeIcon
+                className="turquoise"
+                icon="minus"
+                onClick={() => {
+                  handleReduceQty(index);
+                }}
+              />
+            </div>
             <p>{item.quantity}</p>
-            <FontAwesomeIcon
-              className="turquoise"
-              icon="plus-square"
-              onClick={() => {
-                handleAddQty(index);
-              }}
-            />
+            <div className="addremove-btn">
+              <FontAwesomeIcon
+                className="turquoise"
+                icon="plus"
+                onClick={() => {
+                  handleAddQty(index);
+                }}
+              />
+            </div>
           </div>
           <p>{item.title}</p>
         </div>
