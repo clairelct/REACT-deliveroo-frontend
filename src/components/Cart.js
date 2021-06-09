@@ -14,6 +14,7 @@ const Cart = ({ listMeals, setListMeals }) => {
         className={
           listMeals.length !== 0 ? "cart-btn" : "cart-btn cart-empty-btn"
         }
+        onClick={() => alert("That's all, folks !")}
       >
         Valider mon panier
       </button>
